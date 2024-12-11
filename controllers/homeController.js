@@ -66,15 +66,29 @@ const loadDiscussion = async (req,res) => {
         
     }
 }
+<<<<<<< HEAD
 
 const loadProduct = async (req,res) => {
     try {
         res.render('product');
+=======
+const loadProduct = async (req,res) => {
+    try {
+        res.render('product');
+    }catch(err){
+        console.log(err);
+    }
+}
+const loadHigh = async (req,res) => {
+    try {
+        res.render('high');
+>>>>>>> 5bb7945cbe34cd4f0c289abead882bab1a918c2d
     } catch (error) {
         console.log(error.message);
         
     }
 }
+<<<<<<< HEAD
 const loadHigh = async (req,res) => {
     try {
         res.render('high');
@@ -123,8 +137,11 @@ const loadRecycle = async (req,res) => {
 
 
 
+=======
+>>>>>>> 5bb7945cbe34cd4f0c289abead882bab1a918c2d
 
 
+    
 module.exports = {
     loadHome,
     loadResearch,
@@ -135,9 +152,13 @@ module.exports = {
     loadCalculator,
     loadDiscussion,
     loadProduct,
+<<<<<<< HEAD
     loadHigh,
     loadMedium,
     loadLow,
     loadNews,
     loadRecycle
+=======
+    loadHigh
+>>>>>>> 5bb7945cbe34cd4f0c289abead882bab1a918c2d
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -148,3 +149,156 @@ body {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   }
     
+=======
+<<<<<<< HEAD
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background:  #f50404;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #020a16;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card ul,
+.card ol {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.card ul li,
+.card ol li {
+    margin-bottom: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+=======
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+body {
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+.header {
+    background:  #f50404;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1rem;
+}
+
+
+.main-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card h2 {
+    font-size: 1.8rem;
+    color: #020a16;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card ul,
+.card ol {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.card ul li,
+.card ol li {
+    margin-bottom: 8px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+>>>>>>> df2d2903a7778fabb7db0ba483a82e0ca767a375
+>>>>>>> 5bb7945cbe34cd4f0c289abead882bab1a918c2d
