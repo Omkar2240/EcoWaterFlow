@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Page</title>
+  <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+  <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+  <h1>Edit Page</h1>
+  <form action="/page/<%= pageId %>/edit" method="POST">
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" value="<%= title %>" required><br><br>
+
+    <label for="content">Content</label>
+    <div id="editor"><%- content %></div> <!-- Pre-load content -->
+
+    <textarea name="content" id="content" style="display:none;"></textarea>
+    <button type="submit">Save Changes</button>
+  </form>
+
+  <script>
+    const quill = new Quill('#editor', { theme: 'snow' });
+    quill.root.innerHTML = `<%- content %>`; // Load content into Quill editor
+
+    document.querySelector('form').onsubmit = () => {
+      document.querySelector('#content').value = quill.root.innerHTML; // Transfer Quill data to textarea
+    };
+  </script>
+</body>
+</html>

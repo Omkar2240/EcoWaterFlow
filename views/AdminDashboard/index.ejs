@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">CMS Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="" class="active">Dashboard</a></li>
+          <li><a href="/create-post">Create Post</a></li>
+          <li><a href="">Manage posts</a></li>
+          <li><a href="">Manage Users</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="/logout">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Welcome, Admin!</h1>
+        <a href="/logout"><button class="logout-btn">Logout</button></a>
+      </header>
+
+      <section class="content">
+        <div class="card">
+          <h3>Total Posts</h3>
+          <p>120</p>
+        </div>
+        <div class="card">
+          <h3>Total Users</h3>
+          <p>350</p>
+        </div>
+        <div class="card">
+          <h3>Site Views</h3>
+          <p>24,890</p>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

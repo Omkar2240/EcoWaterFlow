@@ -1,0 +1,81 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: #f4f6f9;
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background: #3e8da8;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.heading-research{
+    padding-top: 70px;
+    text-align: center;
+   
+}
+
+/* Main Content Styles */
+main {
+    padding: 40px 0;
+}
+
+h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    color: #2980b9;
+    font-weight: 600;
+    text-align: center;
+}
+
+.research-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(121, 198, 221, 0.505);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: all 0.3s ease-in-out;
+}
+
+.research-card h3 {
+    font-size: 1.8em;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.research-card p {
+    margin-bottom: 15px;
+    font-size: 1em;
+    color:black;
+}
+
+.research-card a {
+    color: #2980b9;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.research-card a:hover {
+    color:green;
+}

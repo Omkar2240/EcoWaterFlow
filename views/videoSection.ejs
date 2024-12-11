@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Video Section</title>
+    <link rel="stylesheet" href="../css/videoSection.css">
+</head>
+<body>
+    <header>
+        <%- include('navbar.ejs') %>
+        <h1>YouTube Video Section</h1>
+        <div class="toggle-buttons">
+            <button id="shorts-btn" class="active">Shorts</button>
+            <button id="videos-btn">Videos</button>
+        </div>
+    </header>
+    <main>
+        <!-- Shorts Section -->
+        <section id="shorts-section" class="video-section active">
+            <div class="video-card">
+                <iframe width="361" height="642" src="https://www.youtube.com/embed/h7SmPR1kJ-4" title="Save RO Wastewater | Water Saving Tips | #savewater #waterconservationtips" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Save RO Wastewater | Water Saving Tips | </p>
+            </div>
+            <div class="video-card">
+                <iframe 
+                    src="https://www.youtube.com/embed/SAMPLE_SHORT_2" 
+                    frameborder="0" 
+                    allowfullscreen>
+                </iframe>
+                <p>Shorts Title 2</p>
+            </div>
+        </section>
+
+        <!-- Normal Videos Section -->
+        <section id="videos-section" class="video-section">
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/CzpbJgyRapg" title="How to conserve water by digging ponds? | Peepal Baba" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>How to conserve water by digging ponds?</p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/8tA3GnlaX18" title="10 Easy Ways to Save Water at Home and Help the Planet: Tips from the Eden Project" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>10 Easy Ways to Save Water at Home and Help the Planet:</p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/HlrId2vT-F8" title="10 Ways To Save Water" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>10 Ways To Save Water</p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/zdDrqFk8WRk" title="Water saving toilet tips" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Water saving toilet tips</p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/7fIZ_w-1MQI" title="10 Ways to Save Water in Agriculture" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>10 Ways to Save Water in Agriculture</p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/nTcFXJT0Fsc" title="Water Saving Tips and Tricks - Let&#39;s Save the Planet - The Environment for Kids" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Water Saving Tips and Tricks - Let's Save the Planet </p>
+            </div>
+            <div class="video-card">
+                <iframe width="1513" height="569" src="https://www.youtube.com/embed/AncpIjMZDjo" title="QNET Products |  Clever Ways to Conserve Water at Home this World Water Day [2016]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <p>Clever Ways to Conserve Water at Home</p>
+            </div>
+        </section>
+    </main>
+    <script src="../js/videoSection.js"></script>
+</body>
+</html>

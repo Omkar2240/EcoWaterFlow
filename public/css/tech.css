@@ -1,0 +1,86 @@
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: url('https://img.freepik.com/premium-photo/2023-concept-every-drop-matters-world-water-environment_875825-40635.jpg'); 
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+.techniques {
+    padding: 60px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 1000px;
+}
+
+.techniques h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background-color: white;
+    color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 15px 0;
+    object-fit: cover;
+}
+
+

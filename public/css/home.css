@@ -1,0 +1,318 @@
+/* Google Font: Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  line-height: 1.6;
+}
+
+/* Video Background */
+video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+
+#main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Part 1: Hero Section */
+.first {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+}
+
+.highlighted-text-shadow {
+  text-shadow: 0 0.15ch 15px rgba(255, 255, 255, 0.7), 0 -2px 0 rgba(255, 255, 255, 0.3);
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  letter-spacing: -0.15ch;
+  line-height: 0.85;
+  color: #fff;
+}
+
+.join-us {
+  font-size: clamp(1rem, 2vw, 2rem);
+  color: #fff;
+  margin-top: 10px;
+}
+
+/* Part 2: Gallery */
+.second {
+  min-height: 92vh;
+  padding: 20px 5%;
+  text-align: center;
+}
+
+.second-heading h1 {
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  margin-bottom: 20px;
+}
+
+.gallery-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery {
+  flex: 1 1 calc(33.33% - 20px);
+  max-width: calc(33.33% - 20px);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.gallery:hover {
+  transform: scale(1.05);
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+.desc {
+  padding: 10px;
+  background: #f9f9f9;
+  text-align: left;
+}
+
+.desc h2 {
+  margin-bottom: 10px;
+}
+
+.see-more {
+  margin-top: 20px;
+}
+
+.see-more a {
+  text-decoration: none;
+  color: blue;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+/* Part 3: Form and Map Section */
+.third {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.form-container,
+.map-container {
+  flex: 1 1 45%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#map {
+  width: 100%;
+  height: 300px;
+  border-radius: 8px;
+}
+
+.confirmation-message {
+  text-align: center;
+  background-color: #d4edda;
+  padding: 15px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+/* Part 4: Cards Section */
+.forth {
+  padding: 50px 5%;
+  background-color: #f8f9fa;
+}
+
+.card-layout {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.card {
+  background-color: #3e8da8;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  width: calc(33% - 20px);
+  min-width: 300px;
+  text-align: center;
+  padding: 20px;
+}
+
+.card-img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-type {
+  margin-top: 10px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.product-descrip {
+  font-size: 14px;
+  color: white;
+  margin: 5px 0;
+  text-align: justify;
+}
+
+.card-btn a button {
+  background-color: #4CAF50;
+  border: none;
+  box-shadow: 1px 1px 2px rgba(141, 136, 136, 0.5);
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.card-btn a button:hover {
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .gallery,
+  .card {
+    flex: 1 1 calc(50% - 20px);
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery,
+  .card {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .highlighted-text-shadow {
+    font-size: 3rem;
+  }
+
+  .join-us {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .form-container,
+  .map-container {
+    padding: 10px;
+  }
+
+  .highlighted-text-shadow {
+    font-size: 2.5rem;
+  }
+
+  .join-us {
+    font-size: 1rem;
+  }
+
+  #map {
+    height: 200px;
+  }
+}

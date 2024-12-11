@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Efficient Tips</title>
+    <link rel="stylesheet" href="../css/tech.css">
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <div class="techniques">
+        <h2>Water Saving Tips</h2>
+        <div class="cards">
+                 
+            <% pages.forEach(function(page) { %>
+                <li><a href="/page/<%= page._id %>"><%= page.title %></a></li>  <!-- Link to each page by _id -->
+              <% }); %>
+
+         </div>
+    </div>
+</body>
+</html>

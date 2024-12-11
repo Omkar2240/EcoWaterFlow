@@ -1,0 +1,129 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f5f7;
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .dashboard-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    background-color: #2d3436;
+    color: white;
+    padding: 20px;
+  }
+  
+  .sidebar .logo {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .sidebar ul li {
+    margin: 15px 0;
+  }
+  
+  .sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .sidebar ul li a:hover,
+  .sidebar ul li a.active {
+    background-color: #636e72;
+  }
+  
+  /* Main Content */
+  .main-content {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+  
+  /* Manage Posts Section */
+  .manage-posts {
+    margin-top: 20px;
+  }
+  
+  .manage-posts .add-post-btn {
+    padding: 10px 15px;
+    background-color: #0984e3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .manage-posts .add-post-btn:hover {
+    background-color: #74b9ff;
+  }
+  
+  .manage-posts table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .manage-posts th,
+  .manage-posts td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .manage-posts th {
+    background-color: #2d3436;
+    color: white;
+  }
+  
+  .manage-posts tr:hover {
+    background-color: #f4f4f4;
+  }
+  
+  .manage-posts .edit-btn,
+  .manage-posts .delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .manage-posts .edit-btn {
+    background-color: #0984e3;
+    color: white;
+  }
+  
+  .manage-posts .delete-btn {
+    background-color: #d63031;
+    color: white;
+  }
+  
+  .manage-posts .edit-btn:hover {
+    background-color: #74b9ff;
+  }
+  
+  .manage-posts .delete-btn:hover {
+    background-color: #e74c3c;
+  }
+  

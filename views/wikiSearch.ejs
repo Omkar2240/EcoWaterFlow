@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Search</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        #results {
+            margin-top: 20px;
+        }
+        input{
+            margin-top: 10%;
+            margin-left: 10%;
+            padding: 10px;
+        }
+        .result {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .result a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <h1>Wikipedia Search</h1>
+    <input type="text" id="searchQuery" placeholder="Search Wikipedia..." />
+    <button id="searchBtn">Search</button>
+    <div id="results"></div>
+    <script >
+        document.getElementById('searchBtn').addEventListener('click', () => {
+    const query = document.getElementById('searchQuery').value.trim();
+
+    if (!query) {
+        alert('Please enter a search term.');
+        return;
+    }
+
+    // Wikipedia API URL
+    const apiUrl = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(query)}&format=json&origin=*`;
+
+    // Fetch data from Wikipedia API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => {
+            displayResults(data.query.search);
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+});
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById('results');
+    resultsContainer.innerHTML = ''; // Clear previous results
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found.</p>';
+        return;
+    }
+
+    results.forEach(result => {
+        const resultDiv = document.createElement('div');
+        resultDiv.classList.add('result');
+
+        const title = document.createElement('a');
+        title.href = `https://en.wikipedia.org/?curid=${result.pageid}`;
+        title.target = '_blank';
+        title.textContent = result.title;
+
+        const snippet = document.createElement('p');
+        snippet.innerHTML = result.snippet; // HTML content (use innerHTML for highlighted text)
+
+        resultDiv.appendChild(title);
+        resultDiv.appendChild(snippet);
+        resultsContainer.appendChild(resultDiv);
+    });
+}
+
+    </script>
+</body>
+</html>

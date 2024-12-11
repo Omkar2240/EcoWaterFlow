@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Manage Posts</title>
+  <link rel="stylesheet" href="/css/postStyle.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">CMS Admin</h2>
+      <nav>
+        <ul>
+          <li><a href="index.ejs">Dashboard</a></li>
+          <li><a href="#">Create Post</a></li>
+          <li><a href="" class="active">Manage Posts</a></li>
+          <li><a href="">Manage Users</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>Manage Posts</h1>
+      </header>
+
+      <!-- Manage Posts Section -->
+      <section class="manage-posts">
+        <button class="add-post-btn">Add New Post</button>
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Category</th>
+              <th>Publication Date</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>How to Start Blogging</td>
+              <td>John Doe</td>
+              <td>Blogging</td>
+              <td>2024-11-15</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>Top 5 Photography Tips</td>
+              <td>Jane Smith</td>
+              <td>Photography</td>
+              <td>2024-11-10</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Guide to Fitness Goals</td>
+              <td>Mike Brown</td>
+              <td>Health</td>
+              <td>2024-11-08</td>
+              <td>
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

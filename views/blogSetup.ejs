@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Blog Setup</title>
+</head>
+<body style="font-family: Arial, sans-serif; background-color: #dcd08b; margin: 0; padding: 20px;">
+  <div style="max-width: 600px; margin: 0 auto; background: #6db163; padding: 40px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
+    <h1 style="text-align: center; color: #ffffff;">Share Information</h1>
+    <form action="" method="POST" enctype="multipart/form-data" style="display: flex; flex-direction: column; gap: 15px;">
+      
+        <!--Title -->
+        <label for="title" style="font-weight: bold; color: #333;">Title</label>
+        <input 
+        type="text" 
+        id="title" 
+        name="blog_title" 
+        placeholder="Enter title" 
+        required 
+        style="padding: 10px; border: 1px solid blue; border-radius: 5px; width: 100%;">
+
+        <!-- Date -->
+        <label for="date" style="font-weight: bold; color: #333;">Date:</label>
+        <input 
+          type="date" 
+          id="date" 
+          name="date" 
+          required 
+          style="padding: 10px; border: 1px solid blue; border-radius: 5px; width: 100%;">
+        
+        <!-- Image -->
+        <label for="image" style="font-weight: bold; color: #333;">Image</label>
+        <input 
+          type="file" 
+          id="image" 
+          name="blog_image" 
+          style="padding: 10px; border: 1px solid blue; border-radius: 5px; width: 100%;">
+
+      <!-- Content -->
+      <label for="content" style="font-weight: bold; color: #333;">Write Information</label>
+      <textarea 
+        id="content" 
+        name="description" 
+        placeholder="please verify Information before submit" 
+        rows="6" 
+        required 
+        style="padding: 10px; border: 1px solid blue; border-radius: 5px; width: 100%;"></textarea>
+        <div>
+            <label for="name">Admin Name:</label>
+            <input type="text" name="name" placeholder="Enter name">
+        </div>
+        <div>
+            <label for="email">Admin Email:</label>
+            <input type="email" name="email" placeholder="Enter Email">
+        </div>
+        <div>
+            <label for="password">Admin Password:</label>
+            <input type="password" name="password" placeholder="Enter Password">
+        </div>
+
+
+      <!-- Submit Button -->
+      <button 
+        type="submit" 
+        style="padding: 10px; border: none; border-radius: 5px; background-color: #458acf; color: white; font-weight: bold; cursor: pointer;">
+        Submit
+      </button>
+    </form>
+  </div>
+
+  <% 
+    if (typeof message !== 'undefined') {
+        %>
+        <p style="color: red;"><%= message %></p>
+        <%    
+    }
+   %>
+  
+</body>
+</html>
