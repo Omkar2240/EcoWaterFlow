@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture Water Footprint Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+</head>
+<body>
+    
+    <div class="container" style="margin-top: 80px;">
+        <h1>Agriculture Water Footprint Calculator</h1>
+
+        <form id="water-calculator-form">
+            <label for="crop">Select Crop:</label>
+            <select id="crop">
+                <option value="rice">Rice</option>
+                <option value="cotton">Cotton</option>
+                <option value="millets">Millets</option>
+                <option value="groundnut">Groundnut</option>
+                <option value="sugarcane">Sugarcane</option>
+                <option value="pulses">Pulses</option>
+                <option value="tea">Tea</option>
+                <option value="coffee">Coffee</option>
+                <option value="cashew">Cashew</option>
+                <option value="barley">Barley</option>
+            </select>
+
+            <label for="climatic-condition">Select Climatic Condition:(neglected)</label>
+            <select id="climatic-condition">
+                <option value="tropical-wet">Tropical Wet</option>
+                <option value="subtropical-humid">Subtropical Humid</option>
+                <option value="tropical-dry">Tropical Dry</option>
+                <option value="semi-arid">Semi-Arid</option>
+                <option value="montane">Montane</option>
+            </select>
+
+            <label for="soil-type">Select Soil Type:(neglected)</label>
+            <select id="soil-type">
+                <option value="alluvial">Alluvial</option>
+                <option value="black-soil">Black Soil</option>
+                <option value="red-soil">Red Soil</option>
+                <option value="laterite-soil">Laterite Soil</option>
+                <option value="peaty-marshy">Peaty & Marshy</option>
+                <option value="arid-desert">Arid & Desert Soil</option>
+            </select>
+
+            <label for="region">Select Region (State/Village):</label>
+            <select id="region" required>
+                <option value="punjab">Punjab</option>
+                <option value="maharashtra">Maharashtra</option>
+                <option value="gujarat">Gujarat</option>
+                <option value="tamil-nadu">Tamil Nadu</option>
+                <option value="uttar-pradesh">Uttar Pradesh</option>
+                <option value="assam">Assam</option>
+                <option value="kerala">Kerala</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="west-bengal">West Bengal</option>
+                <option value="others">Other</option>
+            </select>
+
+            <label for="irrigation-method">Select Irrigation Method:</label>
+            <select id="irrigation-method" >
+                <option value="flood">Flood Irrigation</option>
+                <option value="sprinkler">Sprinkler Irrigation</option>
+                <option value="drip">Drip Irrigation</option>
+            </select>
+
+            <label for="acres">Acres of Land:</label>
+            <input type="number" id="acres" placeholder="Enter acres of land (e.g., 1)" min="1">
+
+            <button type="button" id="calculate-btn">Calculate</button>
+        </form>
+
+        <div id="results" class="results">
+            <h2>Results:</h2>
+            <p id="water-consumption"></p>
+            <p id="water-wasted"></p>
+            <div id="solutions">
+                <h3>Solutions to Reduce Water Wastage:</h3>
+                <ul id="solution-list"></ul>
+                <a href="/content">know more</a>
+            </div>
+        </div>
+    </div>
+    
+    <script src="calculator.js"></script>
