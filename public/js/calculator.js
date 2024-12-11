@@ -31,8 +31,8 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
     const waterWasted = totalConsumption * (1 - efficiency);
 
     // Display results
-    document.getElementById("water-consumption").innerText = `Total Water Consumption: ${totalConsumption.toLocaleString()} liters/year`;
-    document.getElementById("water-wasted").innerText = `Water Wasted: ${waterWasted.toLocaleString()} liters/year`;
+    document.getElementById("water-consumption").innerText = Total Water Consumption: ${totalConsumption.toLocaleString()} liters/year;
+    document.getElementById("water-wasted").innerText = Water Wasted: ${waterWasted.toLocaleString()} liters/year;
 
     // Solutions
     const solutions = getSuggestions(crop, irrigationMethod);

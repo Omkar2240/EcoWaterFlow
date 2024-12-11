@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8" />
-    <title>EcoWaterFlow</title>
-    <link rel="stylesheet" href="../css/home.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
-  <body>
-    <%- include('navbar.ejs') %>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>EcoWaterFlow</title>
+  <link rel="stylesheet" href="../css/home.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+  <%- include('navbar.ejs') %>
 
     <!-- background video -->
     <video id="Video" autoplay loop muted src="../video/bg_video.mp4"></video>
@@ -24,46 +26,80 @@
       </div>
 
       <!-- 2nd part of website -->
+      <center>
+        <div class="second" style="padding: 1%;">
+          <div class="second-heading">
+            <h1>Techniques for diferent Regions of water-scarcity</h1>
+          </div>
+          <div class="rectangle-container" style="padding: 5%;padding-left: 4%;">
+            <a href="/high.ejs" style="color: black;text-decoration: none;">
+            <div class="rectangle rectangle-1">
+              <h2 style="padding-top: 23%;">High Level</h2>
+              <p>(6 states)</p></a>
+            </div></a>
+            <a href=""></a>
+            <div class="rectangle rectangle-2">
+              <h2 style="padding-top: 23%;">Moderate Level</h2>
+              <p>(7 states)</p>
+            </div></a>
+            <a href=""></a>
+            <div class="rectangle rectangle-3">
+              <h2 style="padding-top: 23%;">Low Level</h2>
+              <p>(5 states)</p>
+            </div></a>
+          </div>
+        </div>
+        <center>
+          <div class="scarcity map">
+            <img src="./images/scarcity-map.png" style="height: 50%;width: 40%;">
+          </div>
+        </center>
+      </center>
+
       <div class="second">
         <div class="second-heading">
-            <h1>Water Efficient Techniques</h1>
+          <h1>
+            Water Efficent techniques
+          </h1>
         </div>
-        <div class="gallery-container">
-            <!-- Mulching -->
-            <div class="gallery">
-              <a href="https://en.wikipedia.org/wiki/Mulch">
-                    <img src="images/tech-images/mulching.jpeg" alt="Mulching">
-                  </a>
-                <div class="desc">
-                    <h2><u>Mulching</u></h2>
-                    Mulching is one of the simplest and most beneficial practices you can use. Mulch helps conserve and extend available water, protects the soil from erosion, reduces competition, moderates temperature extremes, and acts as a barrier.
-                </div>
-            </div>
-            <!-- Precision Agriculture -->
-            <div class="gallery">
-                <a href="https://en.wikipedia.org/wiki/Precision_agriculture">
-                    <img src="images/tech-images/water_precision.jpeg" alt="Precision Agriculture">
-                </a>
-                <div class="desc">
-                    <h2><u>Precision Agriculture</u></h2>
-                    Precision agriculture, as the name implies, means application of precise and correct amounts of inputs like water, fertilizer, and pesticides at the correct time to the crop for increasing its productivity and maximizing its yields.
-                </div>
-            </div>
-            <!-- Fog Collection -->
-            <div class="gallery">
-                <a href="https://en.wikipedia.org/wiki/Fog_collection">
-                    <img src="images/tech-images/fog_collector.jpeg" alt="Fog Collection">
-                </a>
-                <div class="desc">
-                    <h2><u>Fog Collection</u></h2>
-                    Fog collection is a method of harvesting water from fog using large vertical mesh nets. It is a sustainable technology that can provide fresh water for drinking, gardening, and afforestation.
-                </div>
-            </div>
+        <div class="gallery" style="width: 30%; height: 50%;padding: 0.5%;">
+          <a target="_blank" href="">
+            <img src="./images/mulching.jpeg" width="390" height="400">
+          </a>
+          <div class="desc" style="width:100%;">
+            <h2><u>Mulching</u></h2>Mulching is one of the simplest and most beneficial practices you can use.Mulch
+            helps conserve and extend available water, protects the soil from erosion, reduces competition by moderates
+            temperature extremes, and acts as a barrier.
+          </div>
         </div>
-        <div class="see-more">
-            <a href="/content">See More</a>
+
+        <div class="gallery" style="width: 30%; height: 50%;padding: 0.5%;">
+          <a target="_blank" href="">
+            <img src="./images/water pricision.jpeg" alt="Forest" width="390" height="400">
+          </a>
+          <div class="desc">
+            <h2><u>Precision Agriculture</u></h2>Precision agriculture, as the name implies, means application of
+            precise and correct amount of inputs like water, fertilizer, pesticides etc. at the correct time to the crop
+            for increasing its productivity and maximizing its yields.
+          </div>
         </div>
-    </div>
+
+        <div class="gallery" style="width: 30%; height: 40%;padding: 0.5%;">
+          <a target="_blank" href="">
+            <img src="./images/fog collector.jpeg" alt="Northern Lights" width="390" height="400">
+          </a>
+          <div class="desc">
+            <h2><u>Fog collection</u></h2>Fog - collection is a method of harvesting water from fog using large vertical
+            mesh nets.<br>Fog collection is a sustainable technology that can provide fresh water for drinking,
+            gardening, and afforestation.
+          </div>
+        </div>
+      </div>
+      <a href="home.html">
+        <center>
+          <p style="color:blue;">see more</p>
+        </center>
+      </a>
 
       <!-- 3rd part of website -->
       <div class="third" id="complaint-box">
@@ -74,12 +110,8 @@
             <div id="map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119065.0290580384!2d78.99010876730637!3d21.161065902240665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c0a5a31faf13%3A0x19b37d06d0bb3e2b!2sNagpur%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1732257671153!5m2!1sen!2sin"
-                width="600"
-                height="560"
-                style="border: 0"
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
+                width="560" height="540" style="border: 0" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
           <!-- Complaint Form -->
@@ -125,42 +157,20 @@
 
                 <!-- City Field -->
                 <label for="city">Enter City:</label>
-                <input
-                  type="text"
-                  id="city"
-                  name="city"
-                  placeholder="Enter your city"
-                  required
-                />
+                <input type="text" id="city" name="city" placeholder="Enter your city" required />
 
                 <!-- Pin Code Field -->
                 <label for="pincode">Pin Code:</label>
-                <input
-                  type="text"
-                  id="pincode"
-                  name="pincode"
-                  placeholder="Enter your pin code"
-                  required
-                />
+                <input type="text" id="pincode" name="pincode" placeholder="Enter your pin code" required />
 
                 <!-- Complaint Text Area -->
                 <label for="complaint">Your Complaint:</label>
-                <textarea
-                  id="complaint"
-                  name="complaint"
-                  rows="4"
-                  placeholder="Describe your issue here..."
-                  required
-                ></textarea>
+                <textarea id="complaint" name="complaint" rows="4" placeholder="Describe your issue here..."
+                  required></textarea>
 
                 <!-- Image Upload -->
                 <label for="imageUpload">Upload Supporting Image:</label>
-                <input
-                  type="file"
-                  id="imageUpload"
-                  name="imageUpload"
-                  accept="image/*"
-                />
+                <input type="file" id="imageUpload" name="imageUpload" accept="image/*" />
 
                 <!-- Submit Button -->
                 <button type="submit">Submit Complaint</button>
@@ -169,120 +179,14 @@
           </div>
         </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+        integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+        integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="../js/navbar.js"></script>
 
-      <!-- 4th part of website -->
-      <div class="forth">
-        <div>
-          <h1>Products</h1>
-          <p><b>You Can Buy For Your Home</b></p>
-        </div>
+</body>
 
-        <div class="card-layout">
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/water-timer.jpg"
-              alt="Product 1 Image"
-            />
-            <div class="card-type">Water Timer</div>
-            <div class="product-descrip"><p>
-              Smart water timer with three customizable programs and a rain sensor to prevent overwatering. Features a large LCD and universal compatibility for efficient irrigation in gardens and lawns.
-            </p></div>
-            <div class="card-btn">
-              <a target="_blank"  href="https://www.flipkart.com/proberos-automatic-watering-system-agriculture-spray/p/itm13858e774deca?pid=SYPGNQBZGBH9NDAH&lid=LSTSYPGNQBZGBH9NDAHVNG6VW&marketplace=FLIPKART&cmpid=content_spray-tip_8965229628_gmc"><button>Buy Now</button></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/spray-gun.jpg"
-              alt="Product 2 Image"
-            />
-            <div class="card-type">Garden Hose Nozzle Spray Gun</div>
-            <div class="product-descrip"><p>
-              A durable, comfortable, and leakproof nozzle with a soft rubber coating, ideal for watering gardens, lawns, and flower beds, as well as washing cars and pets; includes 3 free rubber washers to prevent leakage</p></div>
-            <div class="card-btn">
-              <a target="_blank"  href="https://amzn.in/d/5BE1YgE"><button>Buy Now</button></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/Water Saving Toilet bank.jpg"
-              alt="Product 3 Image"
-            />
-            <div class="card-type">Water Saving Toilet bank</div>
-            <div class="product-descrip"><p>
-              Eco-friendly and maintenance-free Green Toilet Bank saves up to 11,680 liters annually by reducing flush water use without compromising performance, offering easy installation and flexibility.
-            </p></div>
-            <div class="card-btn">
-              <a  target="_blank" href="https://store.eco365.co.in/products/water-saving-toilet-bank"><button>Buy Now</button></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="card-layout">
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/soil_moisture_testing.jpg"
-              alt="Product 4 Image"
-            />
-            <div class="card-type">Testing Tensiometer Soil Moisture</div>
-            <div class="product-descrip"><p>
-            The TNEI Testing Tensiometer Model 9024 measures soil moisture levels with high accuracy, offering precise readings at 0.1 units. It is designed for effective soil moisture management in agricultural and environmental applications.
-            </p></div>
-            <div class="card-btn">
-              <a target="_blank"  href="https://www.indiamart.com/proddetail/tensiometer-soil-moisture-23087074862.html?utm_campaign=imob_pdp_share&utm_medium=social&utm_source=social"><button>Buy Now</button></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/aquasol.jpg  "
-              alt="Product 5 Image"
-            />
-            <div class="card-type">AQUASOL Water Testing Meters</div>
-            <div class="product-descrip"><p>
-              The AQUASOL AM TDS Water Testing Meter measures Total Dissolved Solids (TDS) in water, ranging from 0 to 9990 PPM with 1 PPM accuracy. It is designed for precise and reliable water quality testing in various applications.            </p></div>
-            <div class="card-btn">
-              <a  target="_blank" href="https://www.indiamart.com/proddetail/water-testing-meters-2852358556188.html?utm_campaign=imob_pdp_share&utm_medium=social&utm_source=social"><button>Buy Now</button></a>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              class="card-img"
-              src="./images/product-images/fstyler.jpg"
-              alt="Product 6 Image"
-            />
-            <div class="card-type">Electric Water Tank Overflow Alarm </div>
-            <div class="product-descrip"><p>
-              It alerts when the water level reaches a preset point, preventing overflow damage and saving water and electricity. Made of virgin plastic, it operates on AC power and includes an easy-to-install sensor wire for monitoring the tank level.
-            </p></div>
-            <div class="card-btn">
-              <a target="_blank" href="https://dl.flipkart.com/dl/fstyler-electric-water-tank-overflow-alarm-high-quality-voice-sound-15mtr-wire-made-india-wired-sensor-security-system/p/itm7856bbbe556ce?pid=SSSFQYP4F8THHREY&cmpid=product.share.pp&_refId=PP.e933f450-3932-41b3-b79f-3777c5e301e4.SSSFQYP4F8THHREY&_appId=CL"><button>Buy Now</button></a>
-            </div>
-          </div>
-        </div>
-      </div>
-   
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
-      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="../js/navbar.js"></script>
-    
-  </body>
 </html>

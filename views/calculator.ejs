@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../css/calculator.css">
 </head>
 <body>
-    <%- include('navbar.ejs') %>
+    
     <div class="container" style="margin-top: 80px;">
         <h1>Agriculture Water Footprint Calculator</h1>
 
@@ -26,7 +26,7 @@
                 <option value="barley">Barley</option>
             </select>
 
-            <label for="climatic-condition">Select Climatic Condition:</label>
+            <label for="climatic-condition">Select Climatic Condition:(neglected)</label>
             <select id="climatic-condition">
                 <option value="tropical-wet">Tropical Wet</option>
                 <option value="subtropical-humid">Subtropical Humid</option>
@@ -35,7 +35,7 @@
                 <option value="montane">Montane</option>
             </select>
 
-            <label for="soil-type">Select Soil Type:</label>
+            <label for="soil-type">Select Soil Type:(neglected)</label>
             <select id="soil-type">
                 <option value="alluvial">Alluvial</option>
                 <option value="black-soil">Black Soil</option>
@@ -46,7 +46,7 @@
             </select>
 
             <label for="region">Select Region (State/Village):</label>
-            <select id="region">
+            <select id="region" required>
                 <option value="punjab">Punjab</option>
                 <option value="maharashtra">Maharashtra</option>
                 <option value="gujarat">Gujarat</option>
@@ -59,29 +59,18 @@
                 <option value="others">Other</option>
             </select>
 
-            <form id="water-calculator-form">
-                <!-- Existing dropdowns -->
-                <label for="irrigation-method">Select Irrigation Method:</label>
-                <select id="irrigation-method">
-                    <option value="flood">Flood Irrigation</option>
-                    <option value="sprinkler">Sprinkler Irrigation</option>
-                    <option value="drip">Drip Irrigation</option>
-                </select>
-            
-                <!-- Acres input -->
-                <label for="acres">Acres of Land:</label>
-                <input type="number" id="acres" placeholder="Enter acres of land (e.g., 1)" min="1">
-            
-                <button type="button" id="calculate-btn">Calculate</button>
-            </form>
-            
-            <div id="results" class="results">
-                <h2>Results:</h2>
-                <p id="water-consumption"></p>
-                <p id="water-wasted"></p>
-                <h3>Suggestions:</h3>
-                <ul id="solution-list"></ul>
-            </div>      
+            <label for="irrigation-method">Select Irrigation Method:</label>
+            <select id="irrigation-method" >
+                <option value="flood">Flood Irrigation</option>
+                <option value="sprinkler">Sprinkler Irrigation</option>
+                <option value="drip">Drip Irrigation</option>
+            </select>
+
+            <label for="acres">Acres of Land:</label>
+            <input type="number" id="acres" placeholder="Enter acres of land (e.g., 1)" min="1">
+
+            <button type="button" id="calculate-btn">Calculate</button>
+        </form>
 
         <div id="results" class="results">
             <h2>Results:</h2>
@@ -90,10 +79,9 @@
             <div id="solutions">
                 <h3>Solutions to Reduce Water Wastage:</h3>
                 <ul id="solution-list"></ul>
+                <a href="/content">know more</a>
             </div>
         </div>
     </div>
-
-    <script src="../js/calculator.js"></script>
-</body>
-</html>
+    
+    <script src="calculator.js"></script>
