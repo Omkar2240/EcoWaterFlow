@@ -66,24 +66,63 @@ const loadDiscussion = async (req,res) => {
         
     }
 }
-<<<<<<< HEAD
+
 const loadProduct = async (req,res) => {
     try {
         res.render('product');
-=======
-const loadHigh = async (req,res) => {
-    try {
-        res.render('high');
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
     } catch (error) {
         console.log(error.message);
         
     }
 }
-<<<<<<< HEAD
+const loadHigh = async (req,res) => {
+    try {
+        res.render('high');
 
-=======
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+const loadMedium = async (req,res) => {
+    try {
+        res.render('medium');
+
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+const loadLow = async (req,res) => {
+    try {
+        res.render('low');
+
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+
+const loadNews = async (req,res) => {
+    try {
+        res.render('news');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+
+const loadRecycle = async (req,res) => {
+    try {
+        res.render('recycle');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+
+
+
 
 
 module.exports = {
@@ -95,9 +134,10 @@ module.exports = {
     loadquiz,
     loadCalculator,
     loadDiscussion,
-<<<<<<< HEAD
-    loadProduct
-=======
-    loadHigh
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
+    loadProduct,
+    loadHigh,
+    loadMedium,
+    loadLow,
+    loadNews,
+    loadRecycle
 }

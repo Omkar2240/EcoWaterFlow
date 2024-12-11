@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoWater Flow News</title>
+    <!-- <link rel="stylesheet" href="/navbar.css"> -->
+    <link rel="stylesheet" href="../css/news.css">
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <%- include('navbar.ejs') %>
+    <!-- News Section -->
+    <div class="news-head">
+        <h1 class="site-title">Latest News on Water Conservation</h1>
+    </div>
+    
+    <center>
+        <div id="google_translate_element"></div>
+        </div>
+
+        <!-- Your website content goes here -->
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',  // Set the default language of your website here
+                    includedLanguages: 'hi,en,bn,te,mr,ta,ur,gu,ml,kn,pa,or,ma,as,kok,sd,ks,ne,sa,,fr,it,ko',  // Indian languages
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+
+        <!-- Add the Google Translate API -->
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        </div>
+    </center>
+    
+        <main>
+            <div class="new-container">
+
+                <section class="news-grid">
+                    <!-- <div class="news-card">
+                    <img src="" alt="News 1">
+                    <a href="">
+                        <h2 class="news-title"></h2>
+                    </a>
+                    <p class="news-summary"> -->
+                    <!-- News Description -->
+                    <!-- </p>
+                    <div class="shareicons"> -->
+                    <!-- Share options -->
+                    <!-- <i class='bx bxs-share-alt'></i>
+                    </div>
+                </div> -->
+                </section>
+                <div class="pre-next-btn">
+                    <button class="pre-btn btn">Previous</button>
+                    <div style="text-align: center;" class="page-number"></div>
+                    <button class="next-btn btn">Next</button>
+                </div>
+            </div>
+        </main>
+
+        <script src="../js/news.js"></script>
+</body>
+
+</html>

@@ -33,14 +33,13 @@ video {
   top: 0;
 }
 
-
 #main {
   position: relative;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
-/* Part 1: Hero Section */
+/* Hero Section */
 .first {
   height: 100vh;
   width: 100%;
@@ -68,43 +67,41 @@ video {
   margin-top: 10px;
 }
 
-/* Part 2: Gallery */
+/* Gallery Section */
 .rectangle-container {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px; /* Adds space between the rectangles */
+  justify-content: center;
 }
 
 /* Styling for each rectangle */
 .rectangle {
-  width: 350px; /* Adjusted width for better proportions */
+  width: clamp(200px, 30%, 350px); /* Adjusted for responsiveness */
   height: 200px; /* Adjusted height */
   border-radius: 12px; /* Slightly rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Softer shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Rectangle 1 - Blue */
 .rectangle-1 {
-  background-color:rgba(227, 51, 51, 0.908);
+  background-color: rgba(227, 51, 51, 0.9);
 }
 
-/* Rectangle 2 - Green */
 .rectangle-2 {
-  background-color: #f39c12 ;
+  background-color: #f39c12;
 }
 
-/* Rectangle 3 - Orange */
 .rectangle-3 {
-  background-color:rgb(77, 228, 22);
+  background-color: rgb(77, 228, 22);
 }
 
-/* Hover effect to make the rectangles more interactive */
 .rectangle:hover {
   transform: translateY(-10px);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Part 3: Form and Map Section */
+/* Form and Map Section */
 .third {
   min-height: 100vh;
   display: flex;
@@ -172,29 +169,6 @@ button:hover {
   background-color: #45a049;
 }
 
-.second {
-  min-height: 92vh;
-  width: 100%;
-  z-index: 10; 
-  padding-top: 1%;
-  padding-left: 6%;
-}
-.second .second-heading h1 {
-  font-size: 3.5rem;
-  text-align: center;
-}
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-}
-div.gallery:hover {
-  border: 1px solid #777;
-}
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
 #map {
   width: 100%;
   height: 300px;
@@ -209,7 +183,7 @@ div.desc {
   margin-top: 20px;
 }
 
-/* Part 4: Cards Section */
+/* Cards Section */
 .forth {
   padding: 50px 5%;
   background-color: #f8f9fa;
@@ -226,8 +200,7 @@ div.desc {
   background-color: #3e8da8;
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  width: calc(33% - 20px);
-  min-width: 300px;
+  width: clamp(280px, 30%, 400px); /* Responsive width */
   text-align: center;
   padding: 20px;
 }
@@ -276,20 +249,12 @@ div.desc {
     height: auto;
   }
 
-  .gallery,
-  .card {
-    flex: 1 1 calc(50% - 20px);
-    max-width: calc(50% - 20px);
+  .rectangle-container {
+    gap: 10px;
   }
 }
 
 @media (max-width: 768px) {
-  .gallery,
-  .card {
-    flex: 1 1 100%;
-    max-width: 100%;
-  }
-
   .highlighted-text-shadow {
     font-size: 3rem;
   }
@@ -297,14 +262,14 @@ div.desc {
   .join-us {
     font-size: 1.5rem;
   }
+
+  .form-container,
+  .map-container {
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
-  .form-container,
-  .map-container {
-    padding: 10px;
-  }
-
   .highlighted-text-shadow {
     font-size: 2.5rem;
   }
@@ -315,5 +280,9 @@ div.desc {
 
   #map {
     height: 200px;
+  }
+
+  .rectangle {
+    width: 100%;
   }
 }

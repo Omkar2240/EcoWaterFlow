@@ -259,3 +259,9 @@ io.on('connection', function(socket) {
         socket.broadcast.emit('chat', message);
     });
 });
+
+
+//complaint box 
+
+// const complaintRoutes = require('./routes/complaints');
+// app.use('/api/complaints', complaintRoutes);
