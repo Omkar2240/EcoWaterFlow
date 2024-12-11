@@ -66,26 +66,24 @@ const loadDiscussion = async (req,res) => {
         
     }
 }
-<<<<<<< HEAD
 const loadProduct = async (req,res) => {
     try {
         res.render('product');
-=======
+    }catch(err){
+        console.log(err);
+    }
+}
 const loadHigh = async (req,res) => {
     try {
         res.render('high');
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
     } catch (error) {
         console.log(error.message);
         
     }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
 
 
+    
 module.exports = {
     loadHome,
     loadResearch,
@@ -95,9 +93,6 @@ module.exports = {
     loadquiz,
     loadCalculator,
     loadDiscussion,
-<<<<<<< HEAD
-    loadProduct
-=======
+    loadProduct,
     loadHigh
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
 }

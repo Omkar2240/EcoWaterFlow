@@ -18,10 +18,7 @@ home_route.get('/video', homeController.loadvideo);
 home_route.get('/quiz', homeController.loadquiz);
 home_route.get('/calculator', homeController.loadCalculator);
 home_route.get('/discussion', homeController.loadDiscussion);
-<<<<<<< HEAD
 home_route.get('/products', homeController.loadProduct);
-=======
 home_route.get('/high', homeController.loadHigh);
->>>>>>> 246aecc97419b51fe37d29a9bbff79b2869466b7
 
 module.exports = home_route;
