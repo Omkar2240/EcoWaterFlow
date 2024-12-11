@@ -66,7 +66,14 @@ const loadDiscussion = async (req,res) => {
         
     }
 }
-
+const loadHigh = async (req,res) => {
+    try {
+        res.render('high');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
 
 
 module.exports = {
@@ -77,5 +84,6 @@ module.exports = {
     loadvideo,
     loadquiz,
     loadCalculator,
-    loadDiscussion
+    loadDiscussion,
+    loadHigh
 }
