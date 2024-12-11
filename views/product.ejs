@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Listing</title>
+  <link rel="stylesheet" href="../css/product.css">
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+  <div class="container">
+    <!-- Header -->
+    <div style="margin-top: 70px; text-align: center;">
+      <h1>Product Listings</h1>
+    </div>
+
+    <!-- Sidebar and Main Content -->
+    <div class="content">
+      <!-- Sidebar for Categories -->
+      <aside class="sidebar">
+        <h2>Filter by Category</h2>
+        <ul class="category-filter">
+          <li><input type="checkbox" id="home" value="home" onchange="filterProducts()"> Home</li>
+          <li><input type="checkbox" id="agriculture" value="agriculture" onchange="filterProducts()"> Agriculture</li>
+          <li><input type="checkbox" id="industry" value="industry" onchange="filterProducts()"> Industries</li>
+        </ul>
+      </aside>
+
+      <!-- Main Product Grid -->
+      <main class="product-grid" id="product-grid">
+        <!-- Home Products -->
+        <div class="product" data-category="home">
+          <img src="https://m.media-amazon.com/images/I/71vKpbkD1KL._SX679_.jpg" alt="Low-Flow Showerhead">
+          <a href="https://www.amazon.in/ALWAFLI-Tap-Universal-Washbasin-Attachment/dp/B0DPG639PF/ref=sr_1_5?dib=eyJ2IjoiMSJ9.Dw8lcyW-nNLRELxhhqPHeg-7hy8cNlShLRYLEyIXCdiQwCrOVmeLFAiKP7mkURJNLTa_8XP7J_KNoeGarrlh8TFJ2f8j4As_yk-eJaa8R-tGqkZXnpbWj15XMBUqkRbrm4e45zkzNbMuY-WMrIerHKhqlUp5iipC6LPfgY6VvrUTHxQv6zJPNwJV-166pmEMhwFGgvXFsbxd6m1VZDnDMbbo0irWyUZyFfG2T-FZmusoavj8aXX2DiOwZAXu80viSbBvlIpnhhK5BPDWSGHUR_eaWSVGXRrmnMFP9fYLtqo.NmEYxp4ERcpeEDR3FADyntht3SwadQK_XdPZ6KU-x-U&dib_tag=se&keywords=water%2Bsaver&qid=1733911070&sr=8-5&th=1"><p>ALWAFLI Tap Extender for Kitchen Sink Universal Flexible Kitchen Faucet Rotating Water Faucet for Washbasin Flexible Tap for Easy Access Sink Sprayer Attachment</p></a>
+          <span> ₹499</span>
+        </div>
+        <div class="product" data-category="home">
+          <img src="https://m.media-amazon.com/images/I/413Nf+CGfpL._SX679_.jpg" alt="Dual-Flush Toilets">
+          <a href="https://www.amazon.in/AirOxy-Water-Saving-Shower-ECO365/dp/B075SB53TL"><p>Water Saving Shower Head for Bathroom (Blue) with 8 Litres Per Minute (LPM) Flow | Wall Mounted Fitting | Chrome Finish Made with Acrylonitrile Butadiene Styrene</p></a>
+          <span>₹299</span>
+        </div>
+        <div class="product" data-category="home">
+          <img src="https://m.media-amazon.com/images/I/41mw04AId8L._AC_.jpg" alt="Dual-Flush Toilets">
+          <a href="https://www.amazon.com/Toilet-FlushLess-displacement-bladder-bathroom/dp/B002ED3J4K"><p>Toilet FlushLess water displacement bladder bag for toilet, bathroom</p></a>
+          <span></span>
+        </div>
+        <div class="product" data-category="home">
+          <img src="https://m.media-amazon.com/images/I/312uprBxjcL._SY300_SX300_QL70_FMwebp_.jpg" alt="Dual-Flush Toilets">
+          <a href="https://www.amazon.in/ECO365-Suitable-Maintain-Extender-Standard/dp/B00HFQC76M?ref_=ast_sto_dp&th=1"><p>ECO365 Kitchen Water Saving 3Lpm Aerator(Pack Of 2)With Shower Flow|Suitable For Inner(24Mm)&Outer(22Mm)Threads|Easy To Maintain Tap Extender&Saves Upto 80% Water From Tap,Standard</p></a>
+          <span> ₹199</span>
+        </div>
+
+        <!-- Agriculture Products -->
+        <div class="product" data-category="agriculture">
+          <img src="https://m.media-amazon.com/images/I/81jkSiWXbIL._SX522_.jpg" alt="Drip Irrigation">
+          <a href="https://www.amazon.in/Elitech-Drip-Irrigation-Automatically-Waters/dp/B07VJ3PW7R?source=ps-sl-shoppingads-lpcontext&ref_=fplfs&psc=1&smid=A1AU7IGCIISQH1"></a><p>Elitech Drip Irrigation Kit with Electronic Water Timer (Automatically Waters 32 Plants)</p></a>
+          <span>₹3,899</span>
+        </div>
+        <div class="product" data-category="agriculture">
+            <a href="https://www.google.com/shopping/product/1?q=water+saving+tools+for+industries&client=ms-android-vivo-rvo3&sca_esv=417e83525128478d&biw=393&bih=761&tbs=vw:g&sxsrf=ADLYWIIOXf3pWovlvk8IDy-eqMvH7OyT4A:1733921285060&prds=num:1,of:1,eto:8214122999555123860_0,prmr:1,rsk:PC_10153509398799506986,pid:8214122999555123860,cs:1"><img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTyZNhK3uXw2k0rB1iJRjQSDOzfF5mlTb-iGxLnT5U9o0LL5YV-gWPGCzrtHn7ufA9CzzE8kpeTDtX1Zj3u9Xi31DsBvmAS0Q" alt="Soil Moisture Meters"></a>
+          <p>Buy 360 Degree Sprayer Head Water Saving Device Online in India</p>
+          <span>₹699.00</span>
+        </div>
+        <div class="product" data-category="agriculture">
+          <img src="https://rukminim2.flixcart.com/image/416/416/xif0q/drip-irrigation-kit/z/m/6/1-digital-garden-farm-drip-irrigation-timer-with-waterproof-auto-original-imagyejmmzsvzvxp.jpeg?q=70&crop=false" alt="Soil Moisture Meters">
+         <a href="https://www.flipkart.com/verilux-digital-garden-farm-drip-irrigation-timer-waterproof-auto-watering-system-kit/p/itmfb250968d13bc?pid=DGTGYEJMHCV4C34Y&cmpid=product.share.pp&_refId=PP.d939963e-e428-4040-bf0f-3adc5435bd80.DGTGYEJMHCV4C34Y&_appId=WA"><p>Verilux Digital Garden Farm Drip Irrigation Timer with Waterproof Auto Watering System Drip Irrigation Kit</p></a> 
+          <span>₹2,182</span>
+        </div>
+
+        <!-- Industry Products -->
+        <div class="product" data-category="industry">
+          <img src="" alt="Greywater Recycling">
+          <p>Greywater Recycling</p>
+          <span>$500</span>
+        </div>
+        <div class="product" data-category="industry">
+          <img src="https://via.placeholder.com/150" alt="Effluent Treatment Plants">
+          <p>Effluent Treatment Plants</p>
+          <span>$1000</span>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <script src="../js/product.js"></script>
+</body>
+</html>

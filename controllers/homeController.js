@@ -66,6 +66,14 @@ const loadDiscussion = async (req,res) => {
         
     }
 }
+const loadProduct = async (req,res) => {
+    try {
+        res.render('product');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
 
 
 
@@ -77,5 +85,6 @@ module.exports = {
     loadvideo,
     loadquiz,
     loadCalculator,
-    loadDiscussion
+    loadDiscussion,
+    loadProduct
 }
