@@ -1,4 +1,4 @@
-* {
+** {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -6,8 +6,17 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/2023-concept-every-drop-matters-world-water-environment_875825-40635.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
+    
 }
 
 .container {
@@ -15,14 +24,14 @@ body {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
+    background-color:#3e8da8;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #000000;
     margin-bottom: 20px;
 }
 
