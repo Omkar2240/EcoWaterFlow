@@ -163,3 +163,36 @@ news-container {
     background-color: #e0e0e0;
     transition: background-color 0.3s ease;
 }
+#google_translate_widget_container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  #google_translate_icon {
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  #google_translate_element {
+    font-size: 14px;
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+    color: #333;
+    border-radius: 5px;
+  }
+  
+  #google_translate_icon img {
+    border-radius: 50%;
+  }
+
+  #google_translate_widget_container:hover {
+    background-color: #e0e0e0;
+    transition: background-color 0.3s ease;
+  }
+  
