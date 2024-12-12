@@ -869,12 +869,65 @@ submitBtn.addEventListener("click", () => {
       <div class="result">
         <h2>🏆 Your Score: ${score}/${randomQuestions.length} Correct Answers</h2>
         <p>Congratulations on completing the quiz! 🎉</p>
-        <button class="reload-button" onclick="location.reload()">Play Again 🔄</button>
+        <button class="reload-button" onclick="redirectToCertificate()">Download Certificate 🔄</button>
       </div>
     `;
     document.querySelector(".quiz-section").classList.add("quiz-result");
   }
 });
+  // Redirect to certificate page
+  function redirectToCertificate() {
+    window.location.href = '/certificate';
+}
+// Certificate generation function
+function generateCertificate() {
+  const canvas = document.getElementById('certificateCanvas');
+  const ctx = canvas.getContext('2d');
+  const bgImage = new Image();
+
+  // Background image for the certificate
+  bgImage.src = 'https://static.vecteezy.com/system/resources/previews/019/050/104/non_2x/blank-white-template-background-with-flat-design-suitable-for-certificate-background-vector.jpg';
+  
+  bgImage.onload = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      ctx.drawImage(bgImage, 0, 0, canvas.width, canvas.height);
+
+      // Add Certificate Title
+      ctx.font = "bold 40px Georgia";
+      ctx.fillStyle = "#2c3e50";
+      ctx.textAlign = "center";
+      ctx.fillText("Certificate of Achievement", canvas.width / 2, 100);
+
+      // Add Score Details
+      ctx.font = "20px Arial";
+      ctx.fillStyle = "#555";
+      ctx.fillText(`Awarded for achieving a score of ${score}/${randomQuestions.length}`, canvas.width / 2, 180);
+
+      // Add Personalization
+      ctx.font = "30px Arial";
+      ctx.fillStyle = "#333";
+      ctx.fillText("Quiz Participant", canvas.width / 2, 260);
+
+      // Footer
+      ctx.font = "18px Arial";
+      ctx.fillText("Presented by Your Quiz App", canvas.width / 2, canvas.height - 100);
+
+      // Date
+      ctx.font = "16px Arial";
+      ctx.fillText(`Date: ${new Date().toLocaleDateString()}`, canvas.width / 2, canvas.height - 50);
+
+      // Trigger download
+      downloadCertificate(canvas);
+  };
+}
+
+// Download the certificate
+function downloadCertificate(canvas) {
+  const link = document.createElement('a');
+  link.download = 'certificate.png';
+  link.href = canvas.toDataURL('image/png');
+  link.click();
+}
 
 // Creating Dynamic Question Font Size
 const questionElement = document.getElementById("question");
