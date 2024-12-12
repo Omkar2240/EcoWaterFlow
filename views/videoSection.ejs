@@ -10,20 +10,15 @@
     <nav>
         <%- include('navbar.ejs') %>
     </nav>
-       <div class="headings"> <h1>YouTube Video Section</h1>
-    
-     
-    <h1>Water Conservation Videos</h1>
-    <p>Learn how to conserve water and minimize water scarcity.</p>
-</div>
-  <div class="videos-sec" id="videoContainer">
-    <!-- Videos will be dynamically added here -->
-  </div>
-  <div class="pagination">
-    <button id="prevButton">Previous</button>
-    <span id="pageNumber">Page 1</span>
-    <button id="nextButton">Next</button>
-  </div>
+    <div>
+      <h1>Water Conservation Videos</h1>
+      <div id="videoContainer" class="skeleton-container"></div>
+      <div class="pagination-controls">
+        <button id="prevButton">Previous</button>
+        <span id="pageNumber">Page 1</span>
+        <button id="nextButton">Next</button>
+      </div>
+    </div>
 
           <script src="../js/videoSection.js"></script>
 </body>

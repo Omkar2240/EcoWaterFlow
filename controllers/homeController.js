@@ -136,9 +136,15 @@ const loadCase = async (req,res) => {
         
     }
 }
+<<<<<<< HEAD
 const loadCamp = async (req,res) => {
     try {
         res.render('c');
+=======
+const loadCertificate = async (req,res) => {
+    try {
+        res.render('certificate');
+>>>>>>> 3f5ea5a0d3f053d647790f01e122c681e8bc19c4
     } catch (error) {
         console.log(error.message);
         
@@ -168,5 +174,9 @@ module.exports = {
     loadRecycle,
     loadAgro,
     loadCase,
+<<<<<<< HEAD
     loadCamp
+=======
+    loadCertificate
+>>>>>>> 3f5ea5a0d3f053d647790f01e122c681e8bc19c4
 }
