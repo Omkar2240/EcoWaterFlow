@@ -1,82 +1,109 @@
-const waterConsumptionData = {
-    Punjab: {
-        Rice: { Alluvial: 12000000 },
-        Wheat: { Alluvial: 5500000 },
+const cropData = {
+    rice: {
+        climaticConditions: ['Tropical Wet', 'Subtropical Humid'],
+        soilTypes: ['Alluvial', 'Peaty and Marshy'],
+        regions: ['Punjab', 'Haryana', 'Uttar Pradesh', 'Bihar', 'West Bengal', 'Assam', 'Odisha', 'Kerala'],
+        waterUsagePerAcre: 1800000 // Liters/year
     },
-    Haryana: {
-        Rice: { Alluvial: 12000000 },
-        Wheat: { Alluvial: 5500000 },
+    wheat: {
+        climaticConditions: ['Temperate', 'Subtropical'],
+        soilTypes: ['Loamy', 'Clayey'],
+        regions: ['Punjab', 'Haryana', 'Uttar Pradesh', 'Madhya Pradesh', 'Rajasthan'],
+        waterUsagePerAcre: 1200000 // Liters/year
     },
-    "Uttar Pradesh": {
-        Rice: { Alluvial: 12000000 },
-        Wheat: { Alluvial: 5500000 },
-        Sugarcane: {Alluvial:20000000},
+    maize: {
+        climaticConditions: ['Subtropical', 'Tropical'],
+        soilTypes: ['Sandy', 'Loamy'],
+        regions: ['Karnataka', 'Maharashtra', 'Andhra Pradesh', 'Tamil Nadu'],
+        waterUsagePerAcre: 900000 // Liters/year
     },
-    Maharashtra: {
-        Wheat: {Black: 5500000 },
-        Jowar: {Black:4000000},
-        Rice: { Black: 12000000 },
+    sugarcane: {
+        climaticConditions: ['Tropical', 'Subtropical'],
+        soilTypes: ['Alluvial', 'Clayey'],
+        regions: ['Uttar Pradesh', 'Maharashtra', 'Karnataka', 'Tamil Nadu'],
+        waterUsagePerAcre: 2500000 // Liters/year
     },
-    "West Bengal": {
-        Rice: { Alluvial: 9000000 },
-    },
-    "Tamil Nadu": {
-        Rice: { Red: 8500000, Alluvial: 8500000 },
-        Millets: { Red: 4500000,  Alluvial: 5000000 },
-    },
-    Kerala: {
-        Rice: { Laterite: 7500000 },
-    },
-    "Andhra Pradesh": {
-        Rice: { Red: 8500000 , Black:9000000 },
-        Millets: { Red: 4000000,  Black: 4500000 },
-    },
-    "Madhya Pradesh": {
-        Rice: { Black:9000000 },
-        Wheat: {  Black: 6000000 },
-    },
-    Gujarat: {
-        Rice: { Black: 8500000, Alluvial: 9000000 },
-        Bajra: { Black:3000000 , Aluvial: 2000000},
-    },
-    Rajasthan: {
-        Wheat: { Sandy: 4500000, Alluvial: 5000000 },
-        Bajra: { Sandy : 8000000 , Alluvial : 2000000},
-    },
-    Assam: {
-        Rice: { "Clayey Soil" : 7500000},
-    },
-    Chattisgarh: {
-        Rice: { Black: 7000000, Laterite: 9000000 },
-    },
-    Odisha: {
-        Rice: { Red: 7500000, Alluvial: 9000000 },
-    },
-    Karnataka: {
-        Rice: { Red: 8000000, Laterite: 7000000 },
-        Ragi : {Red:3000000 , Laterite : 4000000},
-    },
+    cotton: {
+        climaticConditions: ['Arid', 'Semi-Arid'],
+        soilTypes: ['Black', 'Sandy'],
+        regions: ['Maharashtra', 'Gujarat', 'Madhya Pradesh', 'Telangana'],
+        waterUsagePerAcre: 850000 // Liters/year
+    }
 };
 
-function calculateWaterConsumption() {
-    const state = document.getElementById("state").value;
-    const grain = document.getElementById("grain").value;
-    const soil = document.getElementById("soil").value;
-    const area = parseFloat(document.getElementById("area").value);
+const cropSelect = document.getElementById('crop');
+const climaticConditionSelect = document.getElementById('climatic-condition');
+const soilTypeSelect = document.getElementById('soil-type');
+const regionSelect = document.getElementById('region');
 
-    if (!area || area <= 0) {
-        document.getElementById("result").innerText = "Please enter a valid area.";
+cropSelect.addEventListener('change', () => {
+    const selectedCrop = cropSelect.value;
+
+    if (selectedCrop && cropData[selectedCrop]) {
+        const { climaticConditions, soilTypes, regions } = cropData[selectedCrop];
+
+        climaticConditionSelect.innerHTML = '<option value="">-- Select Climatic Condition --</option>';
+        climaticConditions.forEach(condition => {
+            const option = document.createElement('option');
+            option.value = condition.toLowerCase().replace(/ /g, '-');
+            option.textContent = condition;
+            climaticConditionSelect.appendChild(option);
+        });
+
+        soilTypeSelect.innerHTML = '<option value="">-- Select Soil Type --</option>';
+        soilTypes.forEach(type => {
+            const option = document.createElement('option');
+            option.value = type.toLowerCase().replace(/ /g, '-');
+            option.textContent = type;
+            soilTypeSelect.appendChild(option);
+        });
+
+        regionSelect.innerHTML = '<option value="">-- Select Region --</option>';
+        regions.forEach(region => {
+            const option = document.createElement('option');
+            option.value = region.toLowerCase().replace(/ /g, '-');
+            option.textContent = region;
+            regionSelect.appendChild(option);
+        });
+    }
+});
+
+document.getElementById('calculate-btn').addEventListener('click', () => {
+    const selectedCrop = cropSelect.value;
+    const selectedClimaticCondition = climaticConditionSelect.value;
+    const selectedSoilType = soilTypeSelect.value;
+    const selectedRegion = regionSelect.value;
+    const acres = parseFloat(document.getElementById('acres').value);
+
+    if (!selectedCrop || !selectedClimaticCondition || !selectedSoilType || !selectedRegion || !acres || acres <= 0) {
+        alert('Please select all fields.');
         return;
     }
 
-    const stateData = waterConsumptionData[state];
-    if (!stateData || !stateData[grain] || !stateData[grain][soil]) {
-        document.getElementById("result").innerText = "Data not available for the selected combination.";
-        return;
-    }
+    const waterUsagePerYear = cropData[selectedCrop].waterUsagePerAcre * acres;
+    const waterUsagePerDay = waterUsagePerYear / 365;
+    const waterUsagePerWeek = waterUsagePerDay * 7;
+    const waterUsagePerMonth = waterUsagePerYear / 12;
 
-    const waterPerAcre = stateData[grain][soil];
-    const totalWater = waterPerAcre * area;
+    document.getElementById('water-consumption').textContent = `Total Water Consumed BY Crop Anually: ${waterUsagePerYear.toLocaleString()} liters.`;
+    document.getElementById('daily-water').textContent = `Daily Water Consumed BY Crop: ${waterUsagePerDay.toLocaleString()} liters.`;
+    document.getElementById('weekly-water').textContent = `Weekly Water Consumed BY Crop: ${waterUsagePerWeek.toLocaleString()} liters.`;
+    document.getElementById('monthly-water').textContent = `Monthly Water Consumed BY Crop: ${waterUsagePerMonth.toLocaleString()} liters.`;
 
-    document.getElementById("result").innerText = `Total water consumption for ${area} acre(s) of ${grain} in ${state} (${soil} soil): ${totalWater.toLocaleString()} liters.`;
-}
+    const solutions = [
+        'Implement Alternate Wetting and Drying (AWD) techniques.',
+        'Use efficient irrigation methods like drip or sprinkler irrigation.',
+        'Adopt rainwater harvesting systems to supplement irrigation.',
+        'Choose drought-resistant crop varieties.'
+    ];
+
+    const solutionList = document.getElementById('solution-list');
+    solutionList.innerHTML = '';
+    solutions.forEach(solution => {
+        const listItem = document.createElement('li');
+        listItem.textContent = solution;
+        solutionList.appendChild(listItem);
+    });
+
+    document.getElementById('results').style.display = 'block';
+})

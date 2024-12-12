@@ -28,11 +28,8 @@ home_route.get('/low', homeController.loadLow);
 home_route.get('/news', homeController.loadNews);
 home_route.get('/waste-water-recycle', homeController.loadRecycle);
 home_route.get('/case-studies', homeController.loadCase);
-<<<<<<< HEAD
-home_route.get('/camp', homeController.loadCamp);
-=======
 home_route.get('/certificate', homeController.loadCertificate);
->>>>>>> 3f5ea5a0d3f053d647790f01e122c681e8bc19c4
+home_route.get('/camp', homeController.loadCamp);
 
 
 module.exports = home_route;
