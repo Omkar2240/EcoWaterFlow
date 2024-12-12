@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All complaints</title>
+</head>
+<body>
+    <h3>All Complaints</h3>
+    <% for (let complaint of complaintData) { %>
+        <p>State: <%= complaint.state %></p>
+        <p>City: <%= complaint.city %></p>
+        <p>Pincode: <%= complaint.pincode %></p>
+        <p>Complaint: <%= complaint.complaint %></p>
+        <p>Status: <%= complaint.status %></p>
+    <% } %>
+</body>
+</html>

@@ -31,4 +31,6 @@ home_route.get('/case-studies', homeController.loadCase);
 home_route.get('/certificate', homeController.loadCertificate);
 
 
+
+
 module.exports = home_route;

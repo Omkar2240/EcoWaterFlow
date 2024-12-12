@@ -1,5 +1,6 @@
 const User = require('../models/userModel');
 const bcrypt = require('bcrypt');
+const Complaint = require('../models/complaintModel')
 
 const loadLogin = async (req,res) => {
     try {
@@ -69,6 +70,18 @@ const createAccountSetup = async(req,res) => {
         res.status(500).send("Error creating account: " + error.message);
     }
 }
+const createComplaint = async(req,res) => {
+    try {
+        const { state,city, pincode,complaint } = req.body;
+
+        const comp = new Complaint({ state,city, pincode,complaint });
+        await comp.save();
+        
+        res.redirect('/');
+    } catch (error) {
+        res.status(500).send("Error creating account: " + error.message);
+    }
+}
 
 
 const post = async (req,res) => {
@@ -94,5 +107,7 @@ module.exports = {
     createAccountSetup,
     verifyLogin,
     post,
-    logout
+    logout,
+    createComplaint
+    
 }

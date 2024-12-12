@@ -26,6 +26,7 @@ const adminLoginAuth = require('../middleware/adminLoginAuth');
 // new account 
 user_route.get('/create-account',userController.loadCreateAccount);
 user_route.post('/create-account',userController.createAccountSetup);
+user_route.post('/',userController.createComplaint);
 
 // login
 user_route.get('/login',adminLoginAuth.isLogout,userController.loadLogin);
@@ -34,5 +35,6 @@ user_route.post('/login',userController.verifyLogin);
 user_route.get('/logout',adminLoginAuth.isLogin,userController.logout);
 
 user_route.get('/post',userController.post);
+
 
 module.exports = user_route;
