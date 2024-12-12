@@ -236,6 +236,27 @@ passport.use(new LocalStrategy(
       res.status(500).send('Error deleting the page.');
     }
   });
+
+  // Share the page 
+  app.get('/page/:id', (req, res) => {
+    const post = Page.find(p => p.id === parseInt(req.params.id));
+    if (post) {
+      res.render('page', { Page });
+    } else {
+      res.status(404).send('Page not found');
+    }
+  });
+
+  app.get('/share/:pageId', (req, res) => {
+    const post = page.find(p => p.id === parseInt(req.params.pageId));
+    if (post) {
+      const shareUrl = `http://example.com/posts/${page.id}`;
+      res.json({ message: 'Share this link', shareUrl });
+    } else {
+      res.status(404).send('Page not found');
+    }
+  });
+  
   
   
 
