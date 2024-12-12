@@ -1,4 +1,4 @@
-** {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,79 +10,86 @@ body {
     background-image: url("https://img.freepik.com/premium-photo/2023-concept-every-drop-matters-world-water-environment_875825-40635.jpg");
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    
 }
 
 .container {
-    width: 80%;
-    max-width: 900px;
-    margin: 0 auto;
+    max-width: 600px;
+    margin: auto;
+    background:#86c2d696;
     padding: 20px;
-    background-color:#3e8da8;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   
 }
 
 h1 {
     text-align: center;
-    color: #000000;
     margin-bottom: 20px;
 }
 
-form {
-    margin-bottom: 20px;
-}
-
-label {
-    font-size: 14px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    display: block;
-    margin-top: 10px;
-}
-
-select, input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.button-container {
+    text-align: center;
+    margin-bottom: 30px;
 }
 
 button {
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
-    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
     border: none;
     border-radius: 4px;
-    font-size: 16px;
-    margin-top: 20px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #45a049;
+    opacity: 0.9;
 }
 
-.results {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #e7f7e7;
-    border-radius: 8px;
+#domestic-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#agro-btn {
+    background-color: #ff1010ec;
+    color: white;
+}
+
+#domestic-calculator {
     display: none;
 }
 
-#solution-list {
-    list-style: none;
+label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
 }
 
-#solution-list li {
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.results {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #e7f7e7;
+    border-radius: 8px;
+}
+
+.solutions {
+    margin-top: 20px;
+}
+
+.solutions h3 {
     margin-bottom: 10px;
 }

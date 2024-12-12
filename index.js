@@ -20,6 +20,9 @@ app.get('/', (req, res) => {
 });
 const path = require('path');
 app.set('view engine', 'ejs');
+// Set the static files directory
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set('views', path.join(__dirname, 'views'));
 app.use((req, res, next) => {
     res.locals.user = req.session.user;  // Set user data globally for all views
