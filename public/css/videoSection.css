@@ -1,51 +1,93 @@
-/* General Styles */
+/* Basic styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
 }
 
-.headings{
-    text-align: center;
+h1 {
+  margin-bottom: 20px;
 }
-  .videos-sec {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
+
+.pagination-controls {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+/* Skeleton loader styles */
+.skeleton-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.skeleton {
+  background-color: #202020;
+  width: 300px;
+  height: 200px;
+  margin: 0 auto 16px;
+  border-radius: 8px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #202020 25%, #3a3a3a 50%, #202020 75%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
   }
-  .video-new {
-    width: 300px;
+  100% {
+    transform: translateX(100%);
   }
-iframe-video {
-    width: 100%;
-    height: 200px;
-    border: none;
-  }
-  .pagination {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 0;
-  }
-  .pagination button {
-    padding: 10px 20px;
-    margin: 0 10px;
-    font-size: 16px;
-    cursor: pointer;
-    border: none;
-    background: #007bff;
-    color: white;
-    border-radius: 5px;
-  }
-  .pagination button:disabled {
-    background: #ccc;
-    cursor: not-allowed;
-  }
-  .pagination span {
-    font-size: 16px;
-    margin: 0 10px;
-  }
+}
+
+.skeleton-title {
+  background-color: #202020;
+  height: 20px;
+  width: 70%;
+  margin: 8px auto 0;
+  border-radius: 4px;
+}
+
+/* Video container styles */
+.video-new {
+  width: 300px;
+  margin: 16px auto;
+}
+
+.iframe-video {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 8px;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 8px 0;
+}
