@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexed Divs with Images and Description</title>
+    <link rel="stylesheet" href="../css/c.css">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .campaign-card {
+            width: 25%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .campaign-img {
+            width: 100%;
+            height: auto;
+        }
+        .description {
+            padding: 10px;
+        }
+        .enroll-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .enroll-btn:hover {
+            background-color: #45a049;
+        }
+        .filter-container {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <div style="margin-top: 80px; text-align: center;">
+        <h1>Camps</h1>
+        <p>Explore the various camps we have to offer</p>
+    </div>
+
+    <center>
+    <div class="filter-container">
+        <label for="dateFilter" style="font-size: large;">Sort by Date:</label>
+        <select id="dateFilter" onchange="sortByDate()" style="font-size: large;">
+            <option value="default" style="font-size: large;">Select Date</option>
+            <option value="asc"style="font-size: large;">Oldest First</option>
+            <option value="desc"style="font-size: large;">Newest First</option>
+        </select>
+    </div>
+    </center>
+
+    <div class="container" id="campaignContainer">
+        <div class="campaign-card" data-date="2024-03-01">
+            <img src="../images/camp-image/1.jpg" class="campaign-img">
+            <div class="description">
+                <h3>Water Conservation Awareness Camp</h3>
+                <p>
+                    <li>Date: 2024-03-01</li>
+                    <li>Days: 5</li>
+                    <li>Venue: City Park</li><br>
+                    This camp educates participants about the global water scarcity crisis...
+                </p>
+                <button class="enroll-btn" onclick="window.location.href='https://jalshakti.gov.in'">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="campaign-card" data-date="2024-02-15">
+            <img src="../images/camp-image/2.jpg" class="campaign-img">
+            <div class="description">
+                <h3>Eco-Friendly Water Usage Camp</h3>
+                <p>
+                    <li>Date: 2024-02-15</li>
+                    <li>Days: 3</li>
+                    <li>Venue: Green Valley</li><br>
+                    Focused on promoting sustainable living, this camp teaches campers how to minimize water consumption...
+                </p>
+                <button class="enroll-btn" onclick=window.location.href="https://jalshakti.gov.in">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="campaign-card" data-date="2024-05-10">
+            <img src="../images/camp-image/3.webp" class="campaign-img">
+            <div class="description">
+                <h3>Save Water, Save Life Camp</h3>
+                <p>
+                    <li>Date: 2024-05-10</li>
+                    <li>Days: 4</li>
+                    <li>Venue: Eco Resort</li><br>
+                    Aimed at creating environmental stewards, this camp emphasizes the importance of water conservation...
+                </p>
+                <button class="enroll-btn" onclick="window.location.href='https://jalshakti.gov.in">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="campaign-card" data-date="2024-04-01">
+            <img src="../images/camp-image/4.jpg" class="campaign-img">
+            <div class="description">
+                <h3>Sustainable Agriculture and Water Management Camp</h3>
+                <p>
+                    <li>Date: 2024-04-01</li>
+                    <li>Days: 7</li>
+                    <li>Venue: Farmstead</li><br>
+                    This camp focuses on the intersection of water scarcity and agriculture...
+                </p>
+                <button class="enroll-btn" onclick="window.location.href='https://jalshakti.gov.in">Enroll Now</button>
+            </div>
+        </div>
+
+        <div class="campaign-card" data-date="2024-06-05">
+            <img src="../images/camp-image/5.jpg" class="campaign-img">
+            <div class="description">
+                <h3>Urban Water Solutions Camp</h3>
+                <p>
+                    <li>Date: 2024-06-05</li>
+                    <li>Days: 3</li>
+                    <li>Venue: City Hall</li><br>
+                    Designed for young innovators, this camp explores how cities can combat water scarcity...
+                </p>
+                <button class="enroll-btn" onclick="window.location.href='https://jalshakti.gov.in'">Enroll Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sort function
+        function sortByDate() {
+            const container = document.getElementById('campaignContainer');
+            const cards = Array.from(container.getElementsByClassName('campaign-card'));
+            const filterValue = document.getElementById('dateFilter').value;
+            let sortedCards;
+
+            if (filterValue === 'asc') {
+                sortedCards = cards.sort((a, b) => new Date(a.dataset.date) - new Date(b.dataset.date));
+            } else if (filterValue === 'desc') {
+                sortedCards = cards.sort((a, b) => new Date(b.dataset.date) - new Date(a.dataset.date));
+            } else {
+                sortedCards = cards; // Default state, no sorting
+            }
+
+            // Remove all cards from container
+            container.innerHTML = '';
+
+            // Append sorted cards
+            sortedCards.forEach(card => {
+                container.appendChild(card);
+            });
+        }
+    </script>
+
+</body>
+</html>

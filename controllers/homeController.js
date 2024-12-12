@@ -136,6 +136,14 @@ const loadCase = async (req,res) => {
         
     }
 }
+const loadCamp = async (req,res) => {
+    try {
+        res.render('c');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
 
 
 
@@ -159,5 +167,6 @@ module.exports = {
     loadNews,
     loadRecycle,
     loadAgro,
-    loadCase
+    loadCase,
+    loadCamp
 }
