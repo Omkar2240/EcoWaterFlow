@@ -29,6 +29,7 @@ home_route.get('/news', homeController.loadNews);
 home_route.get('/waste-water-recycle', homeController.loadRecycle);
 home_route.get('/case-studies', homeController.loadCase);
 home_route.get('/certificate', homeController.loadCertificate);
+home_route.get('/camp', homeController.loadCamp);
 
 
 

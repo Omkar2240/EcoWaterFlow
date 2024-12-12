@@ -1,56 +1,106 @@
 body {
     font-family: Arial, sans-serif;
-    height: 100vh;
-    background-image: url("https://img.freepik.com/premium-photo/2023-concept-every-drop-matters-world-water-environment_875825-40635.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
+height: 100vh;
+background-image: url("https://img.freepik.com/premium-photo/2023-concept-every-drop-matters-world-water-environment_875825-40635.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: repeat;
+background-position: center;
+display: flex;
+justify-content: center;
+align-items: center;
+padding: 20px;
 }
+
+
 .container {
-    max-width: 600px;
-    margin: auto;
-    background:#86c2d696;
+    max-width: 700px;
+    margin: 50px auto;
+    background: #86c2d696;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 h1 {
     text-align: center;
-    color: #000000;
+    color: #333;
 }
+
 label {
     display: block;
     margin: 10px 0 5px;
-    color: #000000;
+    font-weight: bold;
 }
+
 select, input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
-    border: 1px solid #000000;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
 button {
     width: 100%;
-    padding: 10px;
-    background-color: #28a745;
+    background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 10px;
     font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
 }
+
 button:hover {
-    background-color: #218838;
+    background-color: #45a049;
 }
-.result {
+
+.results {
     margin-top: 20px;
-    font-size: 18px;
-    color: #333;
+    background: #e7f7e7;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.results h2 {
+    margin-top: 0;
+}
+
+.solutions {
+    margin-top: 15px;
+}
+#google_translate_widget_container {
+display: flex;
+align-items: center;
+margin-top: 10px;
+margin-bottom: 20px;
+padding: 5px;
+background-color: #f0f0f0;
+border-radius: 5px;
+}
+
+#google_translate_icon {
+margin-right: 10px;
+cursor: pointer;
+}
+
+#google_translate_element {
+font-size: 14px;
+background-color: transparent;
+border: none;
+padding: 5px;
+color: #333;
+border-radius: 5px;
+text-align: right;
+}
+
+#google_translate_icon img {
+border-radius: 50%;
+}
+
+#google_translate_widget_container:hover {
+background-color: #e0e0e0;
+transition: background-color 0.3s ease;
 }

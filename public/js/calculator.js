@@ -14,9 +14,9 @@ const domesticBtn = document.getElementById("domestic-btn");
 
             // Calculations
             const showerWater = (shower / 5) * 75;
-            const flushWater = flush * 10;
-            const dishesWater = dishes * 4;
-            const clothesWater = clothes * 50;
+            const flushWater = flush * 5;
+            const dishesWater = dishes * 0.25;
+            const clothesWater = clothes * 1;
 
             const totalWaterPerPerson = showerWater + flushWater + dishesWater + clothesWater;
             const totalWater = totalWaterPerPerson * people;

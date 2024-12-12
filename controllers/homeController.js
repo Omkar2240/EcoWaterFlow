@@ -60,7 +60,7 @@ const loadCalculator = async (req,res) => {
 }
 const loadAgro = async (req,res) => {
     try {
-        res.render('Agro');
+        res.render('agro');
     } catch (error) {
         console.log(error.message);
         
@@ -144,6 +144,14 @@ const loadCertificate = async (req,res) => {
         
     }
 }
+const loadCamp = async (req,res) => {
+    try {
+        res.render('c');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
 
 
 
@@ -168,6 +176,11 @@ module.exports = {
     loadRecycle,
     loadAgro,
     loadCase,
+<<<<<<< HEAD
     loadCertificate
     
+=======
+    loadCertificate,
+    loadCamp
+>>>>>>> d14712cbf489acaabf78f9c252f87bf5a976768c
 }

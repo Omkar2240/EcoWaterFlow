@@ -8,36 +8,59 @@
  
 </head>
 <body>
+ 
+        <div id="google_translate_element"></div>
+        </div>
+
+        <!-- Your website content goes here -->
+
+        <!-- Google Translate Script -->
+        <script type="text/javascript">
+            function googleTranslateElementInit() {
+                new google.translate.TranslateElement({
+                    pageLanguage: 'en',  // Set the default language of your website here
+                    includedLanguages: 'hi,en,bn,te,mr,ta,ur,gu,ml,kn,pa,or,ma,as,kok,sd,ks,ne,sa,,fr,it,ko',  // Indian languages
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+                }, 'google_translate_element');
+            }
+        </script>
+
+        <!-- Add the Google Translate API -->
+        <script type="text/javascript"
+            src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+        </div>
+    
     <div class="container">
-        <h1>Water Conservation Calculator</h1>
+        <h1>Water Footprint Calculators</h1>
         <div class="button-container">
-            <button id="domestic-btn">Domestic Calculator</button>
-            <a href="/agro"><button id="agro-btn" >Agriculture Calculator</button></a>
+            <button id="domestic-btn" >Domestic Calculator</button>
+            <button id="agro-btn" onclick="window.open('/agro', '_blank')">Agriculture Calculator</button>
         </div>
 
         <div id="domestic-calculator">
-            <h2>Domestic Water Calculator</h2>
+            
             <form id="domestic-form">
-                <label for="shower">Minutes spent in shower:</label>
-                <input type="number" id="shower" placeholder="Enter minutes spent in shower" min="0">
+                <label for="shower">Minutes spent in shower as per person per day:</label>
+                <input type="number" id="shower" placeholder="Enter minutes spent in shower" min="0" required>
 
-                <label for="flush">Number of toilet flushes per day:</label>
-                <input type="number" id="flush" placeholder="Enter number of toilet flushes" min="0">
+                <label for="flush">Number of toilet flushes as per person per day:</label>
+                <input type="number" id="flush" placeholder="Enter number of toilet flushes" min="0" required>
 
-                <label for="dishes">Number of times dishes are washed per day:</label>
-                <input type="number" id="dishes" placeholder="Enter times dishes are washed" min="0">
+                <label for="dishes">Number of times dishes are washed as per person per day:</label>
+                <input type="number" id="dishes" placeholder="Enter times dishes are washed" min="0" required>
 
-                <label for="clothes">Number of clothes washed per day:</label>
-                <input type="number" id="clothes" placeholder="Enter number of clothes washed" min="0">
+                <label for="clothes">Number of clothes washed as per person per day:</label>
+                <input type="number" id="clothes" placeholder="Enter number of clothes washed" min="0" required>
 
                 <label for="people">Number of people:</label>
-                <input type="number" id="people" placeholder="Enter number of people" min="1">
+                <input type="number" id="people" placeholder="Enter number of people" min="1" required>
 
                 <button type="button" id="calculate-domestic">Calculate</button>
             </form>
 
             <div id="domestic-results" class="results" style="display: none;">
-                <h3>Water Usage Summary:</h3>
+                <h3>Water Usage:</h3>
                 <p id="domestic-summary"></p>
                 <div class="solutions">
                     <h3>Solutions to Reduce Water Wastage:</h3>
@@ -54,8 +77,6 @@
         </div>
     </div>
     <script src="../js/calculator.js"></script>
-    <script>
-        
-    </script>
+
 </body>
-</html>
+</html>     
