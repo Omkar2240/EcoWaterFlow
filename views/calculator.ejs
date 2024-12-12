@@ -3,85 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agriculture Water Footprint Calculator</title>
+    <title>Water Conservation Website</title>
     <link rel="stylesheet" href="../css/calculator.css">
+ 
 </head>
 <body>
-    
-    <div class="container" style="margin-top: 80px;">
-        <h1>Agriculture Water Footprint Calculator</h1>
+    <div class="container">
+        <h1>Water Conservation Calculator</h1>
+        <div class="button-container">
+            <button id="domestic-btn">Domestic Calculator</button>
+            <a href="/agro"><button id="agro-btn" >Agriculture Calculator</button></a>
+        </div>
 
-        <form id="water-calculator-form">
-            <label for="crop">Select Crop:</label>
-            <select id="crop">
-                <option value="rice">Rice</option>
-                <option value="cotton">Cotton</option>
-                <option value="millets">Millets</option>
-                <option value="groundnut">Groundnut</option>
-                <option value="sugarcane">Sugarcane</option>
-                <option value="pulses">Pulses</option>
-                <option value="tea">Tea</option>
-                <option value="coffee">Coffee</option>
-                <option value="cashew">Cashew</option>
-                <option value="barley">Barley</option>
-            </select>
+        <div id="domestic-calculator">
+            <h2>Domestic Water Calculator</h2>
+            <form id="domestic-form">
+                <label for="shower">Minutes spent in shower:</label>
+                <input type="number" id="shower" placeholder="Enter minutes spent in shower" min="0">
 
-            <label for="climatic-condition">Select Climatic Condition:(neglected)</label>
-            <select id="climatic-condition">
-                <option value="tropical-wet">Tropical Wet</option>
-                <option value="subtropical-humid">Subtropical Humid</option>
-                <option value="tropical-dry">Tropical Dry</option>
-                <option value="semi-arid">Semi-Arid</option>
-                <option value="montane">Montane</option>
-            </select>
+                <label for="flush">Number of toilet flushes per day:</label>
+                <input type="number" id="flush" placeholder="Enter number of toilet flushes" min="0">
 
-            <label for="soil-type">Select Soil Type:(neglected)</label>
-            <select id="soil-type">
-                <option value="alluvial">Alluvial</option>
-                <option value="black-soil">Black Soil</option>
-                <option value="red-soil">Red Soil</option>
-                <option value="laterite-soil">Laterite Soil</option>
-                <option value="peaty-marshy">Peaty & Marshy</option>
-                <option value="arid-desert">Arid & Desert Soil</option>
-            </select>
+                <label for="dishes">Number of times dishes are washed per day:</label>
+                <input type="number" id="dishes" placeholder="Enter times dishes are washed" min="0">
 
-            <label for="region">Select Region (State/Village):</label>
-            <select id="region" required>
-                <option value="punjab">Punjab</option>
-                <option value="maharashtra">Maharashtra</option>
-                <option value="gujarat">Gujarat</option>
-                <option value="tamil-nadu">Tamil Nadu</option>
-                <option value="uttar-pradesh">Uttar Pradesh</option>
-                <option value="assam">Assam</option>
-                <option value="kerala">Kerala</option>
-                <option value="rajasthan">Rajasthan</option>
-                <option value="west-bengal">West Bengal</option>
-                <option value="others">Other</option>
-            </select>
+                <label for="clothes">Number of clothes washed per day:</label>
+                <input type="number" id="clothes" placeholder="Enter number of clothes washed" min="0">
 
-            <label for="irrigation-method">Select Irrigation Method:</label>
-            <select id="irrigation-method" >
-                <option value="flood">Flood Irrigation</option>
-                <option value="sprinkler">Sprinkler Irrigation</option>
-                <option value="drip">Drip Irrigation</option>
-            </select>
+                <label for="people">Number of people:</label>
+                <input type="number" id="people" placeholder="Enter number of people" min="1">
 
-            <label for="acres">Acres of Land:</label>
-            <input type="number" id="acres" placeholder="Enter acres of land (e.g., 1)" min="1">
+                <button type="button" id="calculate-domestic">Calculate</button>
+            </form>
 
-            <button type="button" id="calculate-btn">Calculate</button>
-        </form>
-
-        <div id="results" class="results">
-            <h2>Results:</h2>
-            <p id="water-consumption"></p>
-            <p id="water-wasted"></p>
-            <div id="solutions">
-                <h3>Solutions to Reduce Water Wastage:</h3>
-                <ul id="solution-list"></ul>
-                <a href="/content">know more</a>
+            <div id="domestic-results" class="results" style="display: none;">
+                <h3>Water Usage Summary:</h3>
+                <p id="domestic-summary"></p>
+                <div class="solutions">
+                    <h3>Solutions to Reduce Water Wastage:</h3>
+                    <ul>
+                        <li>Take shorter showers or use water-saving showerheads.</li>
+                        <li>Fix any leaks in faucets or pipes immediately.</li>
+                        <li>Use a dual-flush toilet system to reduce water per flush.</li>
+                        <li>Run washing machines and dishwashers only with full loads.</li>
+                        <li>Adopt water-efficient appliances and fixtures.</li>
+                    </ul>
+                    <a href="/">Know More</a>
+                </div>
             </div>
         </div>
     </div>
-    
-    <script src="calculator.js"></script>
+    <script src="../js/calculator.js"></script>
+    <script>
+        
+    </script>
+</body>
+</html>

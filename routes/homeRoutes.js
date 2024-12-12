@@ -17,6 +17,7 @@ home_route.get('/search', homeController.loadSearch);
 home_route.get('/video', homeController.loadvideo);
 home_route.get('/quiz', homeController.loadquiz);
 home_route.get('/calculator', homeController.loadCalculator);
+home_route.get('/agro', homeController.loadAgro);
 home_route.get('/discussion', homeController.loadDiscussion);
 
 home_route.get('/products', homeController.loadProduct);
@@ -26,6 +27,7 @@ home_route.get('/medium', homeController.loadMedium);
 home_route.get('/low', homeController.loadLow);
 home_route.get('/news', homeController.loadNews);
 home_route.get('/waste-water-recycle', homeController.loadRecycle);
+home_route.get('/case-studies', homeController.loadCase);
 
 
 module.exports = home_route;

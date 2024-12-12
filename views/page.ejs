@@ -5,10 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><%= title %></title>
 </head>
+<style>
+  .share-buttons a {
+  margin-right: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #007bff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.share-buttons a:hover {
+  background-color: #0056b3;
+}
+
+</style>
 <body>
+  <header> <%- include('navbar.ejs') %></header>
   <h1><%= title %></h1>
   <div>
     <%- content %>
+  </div>
+  <!-- Share Buttons -->
+  <div class="share-buttons">
+    <!-- WhatsApp -->
+    <a 
+      href="https://api.whatsapp.com/send?text=<%= encodeURIComponent(page.title + ' - ' + page.url) %>" 
+      target="_blank">
+      Share on WhatsApp
+    </a>
+    <!-- Twitter -->
+    <a 
+      href="https://twitter.com/intent/tweet?text=<%= encodeURIComponent(page.title) %>&url=<%= encodeURIComponent(page.url) %>" 
+      target="_blank">
+      Share on Twitter
+    </a>
+    <!-- Facebook -->
+    <a 
+      href="https://www.facebook.com/sharer/sharer.php?u=<%= encodeURIComponent(page.url) %>" 
+      target="_blank">
+      Share on Facebook
+    </a>
   </div>
 
   <% if (page.userId.toString() === userId) { %> <!-- Show only for the owner -->

@@ -58,6 +58,14 @@ const loadCalculator = async (req,res) => {
         
     }
 }
+const loadAgro = async (req,res) => {
+    try {
+        res.render('Agro');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
 const loadDiscussion = async (req,res) => {
     try {
         res.render('discussion');
@@ -120,6 +128,15 @@ const loadRecycle = async (req,res) => {
         
     }
 }
+const loadCase = async (req,res) => {
+    try {
+        res.render('caseStudies');
+    } catch (error) {
+        console.log(error.message);
+        
+    }
+}
+
 
 
 
@@ -140,5 +157,7 @@ module.exports = {
     loadMedium,
     loadLow,
     loadNews,
-    loadRecycle
+    loadRecycle,
+    loadAgro,
+    loadCase
 }
